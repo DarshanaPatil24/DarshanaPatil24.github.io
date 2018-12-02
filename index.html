@@ -1,7 +1,63 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1>Impact of Electric Vehicles on Power Grids of Developed and Developing Nations</h1>
+<h2>Introduction</h2>
+<p>Electricity generation and consumption plays a major role in the economic status of a nation. With the growing need of minimizing the fuel consumption, which has a detrimental effect on the environment, a shift is considered to Electric Vehicles. But is this a silver bullet for all the hitches? In this study we are examining the grid infrastructure of countries with varied economic statuses. With the data for existing consumption and generation, fleet data and fuel consumption, we create a basic model without the presence of Electric Vehicles. We then estimate the introduction of EVs in these grid systems and evaluate how they will impact the electric grid. EVs will have different impact in different regions. In some cases, we can fill up the duck curve and stabilize the demand, while in some cases EVs will have a negative impact on the grid. </p>
+
+<h2>Datasets and Graphical Analysis</h2>
+<h3>Electricity Balance</h3>
+<p>In our study we will concentrate on three regions India, Nicaragua and Canada, which belong to the low, middle and high-income categories respectively. We have obtained this data from the Central Intelligence Agency (CIA) World Factbook, where the data is provided by agencies like National Science Foundation, Department of Defense, etc. We now compare the existing electricity production and generation data for these countries.The Indian and Canadian grid have more significantly electricity produced than consumed. While the Nicaraguan grid is not just minute compared to these two, but also does not have much surplus compared to the other to magnanimous producers and consumers.
+</p>
+
+<div class="row">
+  <div class="column">
+    <img src="Table1a.png" width="600" height="250">
+  </div>
+  <div class="column">
+    <img src="Image1a.png" width="600" height="350">
+  </div>
+</div>
+<p>
+We now assume an introduction of Electric Vehicles into the scenario. We estimate a 30% conversion of conventional vehicles into electric vehicles. For ease of estimation we assume a standard consumption of electricity for battery charging for each type of vehicle. On an average an electric vehicle consumes around 40kWh for running 100 miles. Using this data, we modify a few aspects of the older data to get a new grid structure as shown in Table 2.Using this data, we plot the production and consumption graphs again and determine how it changes the case. Figure 6 shows the changed consumption pattern.We see that the Indian and Canadian grid remain unchanged.However, in Nicargua the consumption with the EV introduction is higher than the production and hence this will lead to a grid collapse.
+</p>
+<div class="row">
+  <div class="column">
+    <img src="Table1b.png" width="600" height="250">
+  </div>
+  <div class="column">
+    <img src="Image1b.png" width="600" height="350">
+  </div>
+</div>
+
+<h3>Vehicular fleet data</h3>
+
+<h3>Duck Curve</h3>
+
+
+
+
+
+
 </body>
 </html>
