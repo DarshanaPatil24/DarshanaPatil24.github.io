@@ -25,34 +25,117 @@
 <h2>Introduction</h2>
 <p>Electricity generation and consumption plays a major role in the economic status of a nation. With the growing need of minimizing the fuel consumption, which has a detrimental effect on the environment, a shift is considered to Electric Vehicles. But is this a silver bullet for all the hitches? In this study we are examining the grid infrastructure of countries with varied economic statuses. With the data for existing consumption and generation, fleet data and fuel consumption, we create a basic model without the presence of Electric Vehicles. We then estimate the introduction of EVs in these grid systems and evaluate how they will impact the electric grid. EVs will have different impact in different regions. In some cases, we can fill up the duck curve and stabilize the demand, while in some cases EVs will have a negative impact on the grid. </p>
 
-<h2>Datasets and Graphical Analysis</h2>
+<h2>Datasets</h2>
+
 <h3>Electricity Balance</h3>
-<p>In our study we will concentrate on three regions India, Nicaragua and Canada, which belong to the low, middle and high-income categories respectively. We have obtained this data from the Central Intelligence Agency (CIA) World Factbook, where the data is provided by agencies like National Science Foundation, Department of Defense, etc. We now compare the existing electricity production and generation data for these countries.The Indian and Canadian grid have more significantly electricity produced than consumed. While the Nicaraguan grid is not just minute compared to these two, but also does not have much surplus compared to the other to magnanimous producers and consumers.
-</p>
+<p>In our study we will concentrate on three regions India, Nicaragua and Canada, which belong to the low, middle and high-income categories respectively. We have obtained this data from the Central Intelligence Agency (CIA) World Factbook, where the data is provided by agencies like National Science Foundation, Department of Defense, etc. </p>
+<figure>
+	 <img src="Table1a.png" width="400" height="150">
+	<figcaption>Table 1 - Production and Consumption Data</figcaption>
+</figure>
 
-<div class="row">
-  <div class="column">
-    <img src="Table1a.png" width="600" height="250">
-  </div>
-  <div class="column">
-    <img src="Image1a.png" width="600" height="350">
-  </div>
-</div>
-<p>
-We now assume an introduction of Electric Vehicles into the scenario. We estimate a 30% conversion of conventional vehicles into electric vehicles. For ease of estimation we assume a standard consumption of electricity for battery charging for each type of vehicle. On an average an electric vehicle consumes around 40kWh for running 100 miles. Using this data, we modify a few aspects of the older data to get a new grid structure as shown in Table 2.Using this data, we plot the production and consumption graphs again and determine how it changes the case. Figure 6 shows the changed consumption pattern.We see that the Indian and Canadian grid remain unchanged.However, in Nicargua the consumption with the EV introduction is higher than the production and hence this will lead to a grid collapse.
-</p>
-<div class="row">
-  <div class="column">
-    <img src="Table1b.png" width="600" height="250">
-  </div>
-  <div class="column">
-    <img src="Image1b.png" width="600" height="350">
-  </div>
-</div>
 
-<h3>Vehicular fleet data</h3>
+<h3>Vehicular fleet data and Fuel Consumption</h3>
+<p>Our vehicular fleet data is obtained from the Global Status Report for Road Safety, prepared by the World Health Organization. This data is obtained based on country participation in a survey.
+</p>
+<figure>
+	 <img src="Vehicle fleet data.png" width="430" height="200">
+	<figcaption>Table 2 - Vehicle fleet categories</figcaption>
+</figure>
+
+<p>Furthermore, we find the average fuel consumption by each of the above vehicular kind and hence estimate the total fuel consumption in each area of these regions. The graph for that can be seen in Figure 2. With this data set, we analyze the existing scenario of these nations and furthermore, evaluate how the replacement of conventional vehicular fleet by the EVs will impact the grid. This analysis is done using Pandas in Python.
+</p>
+<figure>
+	 <img src="fuel_cat.png" width="500" height="300">
+	<figcaption>Figure 1 - Average Annual Fuel Consumption in GGEs per year [x]</figcaption>
+</figure>
+
 
 <h3>Duck Curve</h3>
+<p>The duck curve named by its resemblance to a duck is a graph of power production over the course of a day that shows the timing imbalance between peak demand and renewable energy production. In most cases a dip is seen during the off-peak period that is during the morning-afternoon hours and a steep hike is noticed at the peak hours from 6pm to 9pm as shown in Figure 3. At the peak hours, a steep ramp is required that causes a stress on the grid and a risk of overgeneration. We have gathered the data for the hourly consumption of electricity (from The Independent Electricity System Operator-IESO) during the day for Canada and relate it to this curve and see how the EVs will impact this graph.
+</p>
+<figure>
+	 <img src="duck curve.png" width="500" height="250">
+	<figcaption>Figure 2 - Typical Duck Curve</figcaption>
+</figure>
+
+<h2>Graphical Analysis of Data</h2>
+<h3>Vehicular Fleet Data</h3>
+<p>We begin with the vehicular fleet data of various countries to find the distribution of vehicles and the fuel consumption patterns in these regions. In Figure 4 we see the number of vehicles in each of these regions and their types. We see that though India is a low-income country, the number of vehicles is significantly larger than Nicaragua and Canada. This can conveniently be linked to the high population density in Indi as compared to the other regions. Most of the vehicle type in India belongs to the 2 and 3-wheeler category while in Canada it is the Motor Cars. The vehicle fleet of Nicaragua is negligible compared to those of the other two nations. 
+</p>
+<figure>
+	 <img src="Vehicle fleet data graph.png" width="500" height="400">
+	<figcaption>Figure 3 - Number of vehicles in regions and their types</figcaption>
+</figure>
+
+<h3>Fuel Consumption</h3>
+<p>Furthermore, we estimate the fuel consumption over the year by each of these vehicles and estimate the total fuel consumption in these regions in GGE (gasoline gallon equivalent) per year.  This is collected from the Federal Highway Administration and the American Public Transit Association’s Public Transportation Factbook. The fuel consumption graph can be seen in Figure 5.
+</p>
+<figure>
+	 <img src="fuel.png" width="500" height="400">
+	<figcaption>Figure 4 - Fuel Consumption in GGE per year</figcaption>
+</figure>
+<p>A few things that become evident from the above graph are that though the number of 2 wheelers in India is larger, the fuel consumption by motor cars is significantly more and hence the consumption of fuel in India and Canada is comparable. Nicaragua remains negligible in terms of fuel consumption as well. What will be significant, is studying the impact of EVs on the Nicaraguan grid. For that we need to study the existing grid balance. 
+</p>
+
+<h3>Electricity Balance</h3>
+<p>We now compare the existing electricity production and generation data for these countries. This can be seen in Figure 6.</p>
+<figure>
+ <img src="Image1a.png" width="500" height="400">
+<figcaption>Figure 5 - Production and Consumption of Electricity in Countries</figcaption>
+</figure>
+<p>The Indian and Canadian grid have more significantly electricity produced than consumed. While the Nicaraguan grid is not just minute compared to these two, but also does not have much surplus compared to the other to magnanimous producers and consumers.</p>
+
+<h3>EV Estimation</h3>
+<p>We now assume an introduction of Electric Vehicles into the scenario. We estimate a 30% conversion of conventional vehicles into electric vehicles. For ease of estimation we assume a standard consumption of electricity for battery charging for each type of vehicle. On an average an electric vehicle consumes around 40kWh for running 100 miles. Using this data, we modify a few aspects of the older data to get a new grid structure as shown in Table 3. </p>
+<figure>
+ <img src="ev.png" width="500" height="200">
+<figcaption>Figure 6 - Estimation of Electric Vehicles in the Grid</figcaption>
+</figure>
+<p>Using this data, we plot the production and consumption graphs again and determine how it changes the 
+case. Figure 6 shows the changed consumption pattern.
+</p>
+<div class="row">
+  <div class="column">
+  	<figure>
+ 	 <img src="Image1b.png" width="500" height="400">
+  	<figcaption>Figure 7 - New Consumption post introduction of EVs</figcaption>
+	</figure>
+  </div>
+  <div class="column">
+  	<figure>
+ 	 <img src="nic.png" width="500" height="350">
+  	<figcaption>Figure 8 - Nicaraguan Electricity Balance</figcaption>
+	</figure>
+  </div>
+</div>
+<p>We see that the Indian and Canadian grid remain unchanged. But for Nicargua, the consumption with the EV introduction is higher than the production and hence this will lead to a grid collapse.
+</p>
+
+<h3>Duck Curve</h3>
+<p>With the hourly consumption data from IESO, Canada, we plot the consumption curve for Canada. This is shown in Figure 8. We clearly see the duck curve developed from the same. We then study the average time for which the EVs are charged and then plot the new graph with the introduction of EV consumption. This is shown in Figure 9. </p>
+<figure>
+ <img src="canada duck.png" width="500" height="250">
+<figcaption>Figure 9 - Canadian duck Curve</figcaption>
+</figure>
+<p>Considering a 40kWh requirement for electric vehicles and getting the charging data from the study of ‘Probabilistic Modeling of Electric Vehicle Charging Pattern Associated with Residential Load for Voltage Unbalance Assessment’, we estimate a change in the consumption pattern for Canada.</p>
+<figure>
+ <img src="charge.png" width="500" height="250">
+<figcaption>Figure 10 - Charging time for EVs</figcaption>
+</figure>
+<p>Using the estimation from Figure 9 and daily consumption pattern we analyze the impact of EVs on the daily consumption</p>
+
+<figure>
+ <img src="charge ev.png" width="500" height="250">
+<figcaption>Figure 11 - EV Introduction in Canada and Charging time</figcaption>
+</figure>
+<p>We see that duck curve worsens considering this charging pattern and worsens the load factor. Hence, we need to stabilize the grid. For this we need to encourage charging patterns to shift to the off-peak period as shown in Figure 11. </p>
+
+<figure>
+ <img src="change.png" width="500" height="250">
+<figcaption>Figure 12 - Shifting EV charging to off-peak period</figcaption>
+</figure>
+
 
 
 
